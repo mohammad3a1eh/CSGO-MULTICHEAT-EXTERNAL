@@ -30,7 +30,7 @@ python glow.py
 
 ## how to work?
 
-[ ] **alt+g** for enable or disable wallhack (Glow)
-[ ] **alt+i** for enable or disable aimbot
-[ ] **alt+f** for enable or disable noflash
-[ ] **alt+r** for enable or disable radarcham
+- **alt+g** for enable or disable wallhack (Glow)
+- **alt+i** for enable or disable aimbot
+- **alt+f** for enable or disable noflash
+- **alt+r** for enable or disable radarcham
