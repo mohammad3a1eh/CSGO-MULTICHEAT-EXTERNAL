@@ -15,6 +15,8 @@ pip install mouse
 pip install math
 pip install random
 pip install pyautogui
+pip install colorama
+pip install psutil
 
 ```
 
