@@ -3,7 +3,7 @@
 glow for csgo with python (pymem)
 
 ![CSGO](https://prod.assets.earlygamecdn.com/images/csgo-2.jpg?mtime=1678019572 "CSGO ARTWORK")
-![1](https://github.com/kinite-gp/CSGO-GLOW-EXTERNAL/blob/main/pic/1.png "1")
+![1](https://github.com/kinite-gp/CSGO-MULTICHEAT-EXTERNAL/blob/main/pic/1.png "1")
 
 ## install requirement
 
@@ -30,7 +30,7 @@ python glow.py
 
 ## how to work?
 
-**alt+g** for enable or disable wallhack (Glow)
-**alt+i** for enable or disable aimbot
-**alt+f** for enable or disable noflash
-**alt+r** for enable or disable radarcham
+[ ] **alt+g** for enable or disable wallhack (Glow)
+[ ] **alt+i** for enable or disable aimbot
+[ ] **alt+f** for enable or disable noflash
+[ ] **alt+r** for enable or disable radarcham
