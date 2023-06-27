@@ -34,21 +34,6 @@ print(colorama.Fore.BLUE + art + colorama.Fore.RESET)
 
 print(colorama.Fore.RED)
 
-while True:
-    for i in psutil.process_iter():
-        if "csgo.exe" in i.name():
-            break
-        else:
-            txt = "please open csgo."
-            for c in txt:
-                if c == ".":
-                    print(c)
-                    time.sleep(0.2)
-                else:
-                    time.sleep(0.2)
-                    print(c,end="")
-                    
-print(colorama.Fore.GREEN)
 
 pm = pymem.Pymem("csgo.exe")
 client = pymem.process.module_from_name(pm.process_handle, "client.dll").lpBaseOfDll
@@ -237,61 +222,66 @@ radarcham_status = False
 
 
 if __name__ == "__main__":
-    while True:
-        if keyboard.is_pressed("alt"):
-            if keyboard.is_pressed("g"):
-                if glow_status:
-                    print("Wall-Hack Disable!")
-                    glow_status = False
-                    time.sleep(3)
-                else:
-                    print("Wall-Hack Enable!")
-                    glow_status = True
-                    time.sleep(3)
-            elif keyboard.is_pressed("i"):
-                if aimbot_status:
-                    print("Aim-Bot Disable!")
-                    aimbot_status = False
-                    time.sleep(3)
-                else:
-                    print("Aim-Bot Enable!")
-                    aimbot_status = True
-                    time.sleep(3)
-            elif keyboard.is_pressed("f"):
-                if noflash_status:
-                    print("NoFlash Disable!")
-                    noflash_status = False
-                    time.sleep(3)
-                else:
-                    print("NoFlash Enable!")
-                    noflash_status = True
-                    time.sleep(3)
-            elif keyboard.is_pressed("r"):
-                if radarcham_status:
-                    print("RadarCham Disable!")
-                    radarcham_status = False
-                    time.sleep(3)
-                else:
-                    print("RadarCham Enable!")
-                    radarcham_status = True
-                    time.sleep(3)
-        
-        
-        if glow_status:
-            glow()
-        elif aimbot_status:
-            if mouse.is_pressed("left"):
-                pyautogui.keyDown("ctrl")
-                if keyboard.is_pressed("alt"):
-                    pyautogui.keyUp("ctrl")
-                else:
-                    print("left")
-                    imbot()
-                    pyautogui.keyUp("ctrl")
-        elif radarcham_status:
-            radarcham()
-        elif noflash_status:
-            noflash()
+    try:
+        while True:
+            if keyboard.is_pressed("alt"):
+                if keyboard.is_pressed("g"):
+                    if glow_status:
+                        print("Wall-Hack Disable!")
+                        glow_status = False
+                        time.sleep(3)
+                    else:
+                        print("Wall-Hack Enable!")
+                        glow_status = True
+                        time.sleep(3)
+                elif keyboard.is_pressed("i"):
+                    if aimbot_status:
+                        print("Aim-Bot Disable!")
+                        aimbot_status = False
+                        time.sleep(3)
+                    else:
+                        print("Aim-Bot Enable!")
+                        aimbot_status = True
+                        time.sleep(3)
+                elif keyboard.is_pressed("f"):
+                    if noflash_status:
+                        print("NoFlash Disable!")
+                        noflash_status = False
+                        time.sleep(3)
+                    else:
+                        print("NoFlash Enable!")
+                        noflash_status = True
+                        time.sleep(3)
+                elif keyboard.is_pressed("r"):
+                    if radarcham_status:
+                        print("RadarCham Disable!")
+                        radarcham_status = False
+                        time.sleep(3)
+                    else:
+                        print("RadarCham Enable!")
+                        radarcham_status = True
+                        time.sleep(3)
+            
+            
+            if glow_status:
+                glow()
+            elif aimbot_status:
+                if mouse.is_pressed("left"):
+                    pyautogui.keyDown("ctrl")
+                    if keyboard.is_pressed("alt"):
+                        pyautogui.keyUp("ctrl")
+                    else:
+                        print("left")
+                        imbot()
+                        pyautogui.keyUp("ctrl")
+            elif radarcham_status:
+                radarcham()
+            elif noflash_status:
+                noflash()
+    except KeyboardInterrupt:
+        exit()
+    except pymem.exception.ProcessNotFound:
+        print("please open csgo")
         
         
 print(colorama.Fore.RESET)
