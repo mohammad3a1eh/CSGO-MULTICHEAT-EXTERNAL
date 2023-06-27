@@ -30,14 +30,34 @@ You can turn it ON and OFF with the keys
 
 colorama.init()
 
-print(colorama.Fore.BLUE + art + colorama.Fore.RESET)
-
-print(colorama.Fore.RED)
 
 
-pm = pymem.Pymem("csgo.exe")
-client = pymem.process.module_from_name(pm.process_handle, "client.dll").lpBaseOfDll
-engine = pymem.process.module_from_name(pm.process_handle,"engine.dll").lpBaseOfDll
+def printer():
+    system("cls")
+    print(colorama.Fore.BLUE + art + colorama.Fore.RESET)
+
+    print(colorama.Fore.RED)
+
+    
+printer()
+
+while True:
+    try:
+        pm = pymem.Pymem("csgo.exe")
+        client = pymem.process.module_from_name(pm.process_handle, "client.dll").lpBaseOfDll
+        engine = pymem.process.module_from_name(pm.process_handle,"engine.dll").lpBaseOfDll
+        
+        break
+    except pymem.exception.ProcessNotFound:
+        string = "PLEASE OPEN CSGO."
+        for char in string:
+            time.sleep(0.2)
+            if char == ".":
+                print(char)
+                printer()
+            else:
+                print(char , end="")
+        
 
 aimfov = 120
 
@@ -280,8 +300,7 @@ if __name__ == "__main__":
                 noflash()
     except KeyboardInterrupt:
         exit()
-    except pymem.exception.ProcessNotFound:
-        print("please open csgo")
+
         
         
 print(colorama.Fore.RESET)
