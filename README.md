@@ -22,11 +22,15 @@ pip install psutil
 
 **Warning:** the csgo.py file may be invalidated in the updates. From the dumper folder, run the dumper.exe file (while running the game) to give you a new file and select it.
 
+## video
+
+![1](https://github.com/kinite-gp/CSGO-AIMBOT-EXTERNAL/blob/main/pic/1.gif "1")
+
 ## run
 
 ```commandline
 
-python glow.py
+python main.py
 
 ```
 
