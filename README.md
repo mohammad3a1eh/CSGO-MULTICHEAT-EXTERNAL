@@ -34,6 +34,11 @@ python main.py
 
 ```
 
+## Warning
+**please do not leave it always active because you will be interrupted with the following message**
+![error](https://github.com/kinite-gp/CSGO-AIMBOT-EXTERNAL/blob/main/pic/error.png "error")
+
+
 ## how to work?
 
 - **alt+g** for enable or disable wallhack (Glow)
