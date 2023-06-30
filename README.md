@@ -36,7 +36,7 @@ python main.py
 
 ## Warning
 **please do not leave it always active because you will be interrupted with the following message**
-![error](https://github.com/kinite-gp/CSGO-AIMBOT-EXTERNAL/blob/main/pic/error.png "error")
+![2](https://github.com/kinite-gp/CSGO-MULTICHEAT-EXTERNAL/blob/main/pic/error.png "2")
 
 
 ## how to work?
